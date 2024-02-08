@@ -1,6 +1,7 @@
 // AboutMe.js
 import React from "react";
 import myProfileImage from "./images/profile.jpeg"; // Import your profile image
+import myCV from "./images/cv.pdf"; // Import your CV file
 
 const AboutMe = () => {
   return (
@@ -13,6 +14,11 @@ const AboutMe = () => {
           passionate web developer with expertise in Cloud expertise. <br></br>I
           enjoy creating web applications that provide meaningful solutions.
           Feel free to explore more about my journey and projects!
+        </p>
+        <p style={cvLinkStyle}>
+          <a href={myCV} download>
+            Download CV
+          </a>
         </p>
       </div>
     </div>
@@ -52,5 +58,11 @@ const paragraphStyle = {
   lineHeight: "1.5",
   textAlign: "justify",
 };
-
+const cvLinkStyle = {
+  fontSize: "18px",
+  color: "#007bff",
+  textAlign: "center",
+  textDecoration: "none",
+  cursor: "pointer",
+};
 export default AboutMe;

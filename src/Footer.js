@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div style={footerStyle}>
-      <p>&copy; 2022 Your Website. All rights reserved.</p>
+      <p>&copy; 2024 Your Website. All rights reserved.</p>
     </div>
   );
 };
@@ -15,6 +15,7 @@ const footerStyle = {
   color: "white",
   padding: "10px",
   textAlign: "center",
+  marginTop: "auto", // Push the footer to the bottom of the container
 };
 
 export default Footer;

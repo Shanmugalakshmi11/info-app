@@ -10,41 +10,49 @@ import Footer from "./Footer";
 const App = () => {
   return (
     <Router>
-      <div style={navbarStyle}>
-        {/* Navbar */}
+      <div style={appContainer}>
+        <div style={navbarStyle}>
+          {/* Navbar */}
 
-        <Link to="/" style={navItemStyle}>
-          Home
-        </Link>
+          <Link to="/" style={navItemStyle}>
+            Home
+          </Link>
 
-        <Link to="/about" style={navItemStyle}>
-          About Me
-        </Link>
+          <Link to="/about" style={navItemStyle}>
+            About Me
+          </Link>
 
-        <Link to="/impress" style={navItemStyle}>
-          Impress Page
-        </Link>
+          <Link to="/impress" style={navItemStyle}>
+            Impress Page
+          </Link>
 
-        <Link to="/info" style={navItemStyle}>
-          Info Page
-        </Link>
-      </div>{" "}
-      <div>
-        {/* Content */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/impress" element={<ImpressPage />} />
-          <Route path="/info" element={<InfoPage />} />
-        </Routes>
-        {/* Footer */}
-        <Footer />
+          <Link to="/info" style={navItemStyle}>
+            Info Page
+          </Link>
+        </div>{" "}
+        <div>
+          {/* Content */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutMe />} />
+            <Route path="/impress" element={<ImpressPage />} />
+            <Route path="/info" element={<InfoPage />} />
+          </Routes>
+        </div>
       </div>
+      {/* Footer */}
+      <Footer />
     </Router>
   );
 };
 
 // Styles
+const appContainer = {
+  display: "flex",
+  flexDirection: "column",
+  minHeight: "90vh", // Ensure the container takes at least the full viewport height
+};
+
 const navbarStyle = {
   backgroundColor: "#333",
   padding: "10px",
