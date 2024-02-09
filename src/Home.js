@@ -24,6 +24,7 @@ const Home = () => {
         <>
           <h2 style={headingStyle}>Welcome to My Website</h2>
           <p style={paragraphStyle}>This is the home page content.</p>
+          <p>Design and Create</p>
         </>
       )}
     </div>
